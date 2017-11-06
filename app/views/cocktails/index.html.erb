@@ -1,0 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://static.pexels.com/photos/110472/pexels-photo-110472.jpeg');">
+  <div class="banner-content">
+    <h1>Welcome to Mister Cocktails !</h1>
+    <%= link_to "Create a new cocktail", new_cocktail_path, {class: "btn btn-primary"} %>
+  </div>
+</div>
+
+<ul>
+<% @cocktails.each do |cocktail| %>
+<li>
+  <h2><%= cocktail.name %></h2>
+  <%= link_to 'More Info', cocktail_path(cocktail) %>
+  </li>
+<% end %>
+</ul>
